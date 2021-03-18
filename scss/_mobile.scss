@@ -1,0 +1,89 @@
+// Wide Screen
+@include mediaXL {
+    .projects {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+// Desktop and Laptop
+@include mediaLg {
+    .projects {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+// Tablet and small Laptop
+@include mediaMd {
+    main {
+        align-items: center;
+        text-align: center;
+
+        .lg-heading {
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+    }
+    ul .menu-nav,div.menu-branding {
+        float: none;
+        width: 100%;
+        min-height: 0;
+        &.show {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+    .menu-nav {
+        height: 75vh;
+        transform: translate3d(-100%, 0, 0);
+        font-size: 24px;
+    }
+
+    .menu-branding {
+        height: 25vh;
+        transform: translate3d(100%, 0, 0);
+
+        
+    .portrait {
+        //background: url();
+        width: 150px;
+        height: 150px;
+    }
+    }
+    .menu-nav.show {
+        width: 100%;
+    }
+    
+    .about-info {
+        grid-template-areas: 'bioimage' 'bio' 'skill1' 'skill2' 'skill3';
+        grid-template-columns: 1fr;
+    }
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+// Smart Phones
+@include mediaSm {
+    main#home h1 {
+        // margin-top: 10vh;
+        margin-top: 22vh;
+        font-size: 28px;
+    }
+    main#home h2 {
+        font-size:27px;
+        padding: 0;
+        line-height: 1.2;
+    }
+    .menu-nav.show {
+        width: 100%;
+    }
+    .menu-nav.show {
+        padding: 8rem 0 0 0;
+    }
+    menu-branding .portrait {
+        width: 170px;
+        height: 170px;
+    }
+
+    .projects {
+        grid-template-columns: none;
+    }
+    
+}
